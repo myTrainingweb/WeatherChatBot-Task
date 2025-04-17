@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Wg5CXQgECALRMZ6XgM967V2lVG/3tePhUhYlSo1Xf/Y=",
+  "Source": "Chatbot_Weather",
+  "BasePath": "_content/Chatbot_Weather",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

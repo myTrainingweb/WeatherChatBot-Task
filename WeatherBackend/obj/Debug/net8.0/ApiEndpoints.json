@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "WeatherBotApi.Controllers.WeatherController",
+    "Method": "Post",
+    "RelativePath": "api/Weather",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "WeatherBotApi.Models.DialogflowWebhookRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

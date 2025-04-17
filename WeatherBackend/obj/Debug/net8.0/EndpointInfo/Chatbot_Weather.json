@@ -1,0 +1,76 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "WeatherBot API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Weather": {
+      "post": {
+        "tags": [
+          "Weather"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DialogflowWebhookRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DialogflowWebhookRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DialogflowWebhookRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DialogflowWebhookRequest": {
+        "type": "object",
+        "properties": {
+          "queryResult": {
+            "$ref": "#/components/schemas/QueryResult"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Parameters": {
+        "type": "object",
+        "properties": {
+          "geo_city": {
+            "type": "string",
+            "nullable": true
+          },
+          "date": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QueryResult": {
+        "type": "object",
+        "properties": {
+          "parameters": {
+            "$ref": "#/components/schemas/Parameters"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
